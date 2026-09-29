@@ -232,7 +232,7 @@ histDate.value=today();from.value=today();to.value=today();renderCats();renderPr
     resetSale();
     if(saved)openReceipt(saved);
   }
-  window.saveSale=cloudSaveSale;
+  window.saveSale=cloudSaveSale;document.getElementById("save").onclick=cloudSaveSale;
   async function onlineHistory(){if(sb&&currentUser){await loadCloudSales();return}return localHistory()}
   async function onlineReport(){if(sb&&currentUser){await loadCloudSales();return}return localReport()}
   window.renderHistory=onlineHistory;window.renderReport=onlineReport;
